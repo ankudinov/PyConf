@@ -1,0 +1,15 @@
+{#
+This template can be used to configure a FabricPath VLAN on Nexus switches.
+Variables:
+
+VLAN_NUMBER: VLAN number to be configured
+VLAN_NAME: VLAN name to be configured
+#}
+
+terminal length 0
+conf t
+vlan {{ VLAN_NUMBER }}
+  mode fabricpath
+  name {{ VLAN_NAME }}
+end
+copy run start

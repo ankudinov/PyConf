@@ -1,0 +1,30 @@
+- global_vars:    # Dictionary of variables that can be used by Jinja2 template in any task block.
+    VLAN_NUMBER: 123
+    VLAN_NAME: TEST
+    SUBNET: 192.168.1
+    MASK: /24
+
+- host_db:        # Host YAML database list.
+  - ./db/host-db.yml
+
+- hosts:          # Tag list to select entries from database. Logical AND if multiple tags are used.
+  - N7k
+  - primary
+  mode: cisco     # Defines the right mode to match CLI prompt
+  vars:           # Jinja2 variables to be used for specific block. Takes priority over global.
+    NONE: NONE
+  tasks:          # Contains a name and list of templates to be delivered to hosts.
+  - name: configure a test VLAN on the primary Nexus
+    template:
+    - ./Templates/configure-a-vlan-pri.j2
+    
+- hosts:          # Tag list to select entries from database. Logical AND if multiple tags are used.
+  - N7k
+  - secondary
+  mode: cisco     # Defines the right mode to match CLI prompt
+  vars:           # Jinja2 variables to be used for specific block. Takes priority over global.
+    NONE: NONE
+  tasks:          # Contains a name and list of templates to be delivered to hosts.
+  - name: configure a test VLAN on the secondary Nexus
+    template:
+    - ./Templates/configure-a-vlan-sec.j2

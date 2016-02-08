@@ -9,3 +9,23 @@ Key features:
 - It can execute complex tasks controlled by YAML file (like a very simple Ansible playbook).
 - YAML file can specify a simple config to be delivered or a Jinja2 template and variables to render this template.
 - Hosts can be selected from a simple YAML database by specifing tags. One line per host to be grep friendly.
+
+To run the script, write your own host-db.yml, task-file.yml and templates and execute it in following way:
+
+```text
+cd /path-to-script-directory/
+./pconf.py ./task/configure-a-vlan.yml
+```
+
+Script will ask for your username and password and start delivery.
+
+Proposed directory structure:
+
+| Templates | a folder with Jinja2 templates or configs              |
+| --------- | -------------------------------------------------------|
+| db        | host databases, YAML                                   |
+| task      | task files (aka playbooks), YAML                       |
+| PyConf.py | a piece of unreadable code                             |
+| pconf.py  | starts the script with YAML task as mandatory argument |
+
+NOTE: This is a very first version. A lot to be improved. Any suggestions are welcome.

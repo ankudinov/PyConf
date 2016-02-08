@@ -11,14 +11,11 @@ Key features:
 - Hosts can be selected from a simple YAML database by specifing tags. One line per host to be grep friendly.
 
 To run the script, write your own host-db.yml, task-file.yml and templates and execute it in following way:
-
 ```text
 cd /path-to-script-directory/
 ./pconf.py ./task/configure-a-vlan.yml
 ```
-
 Script will ask for your username and password and start delivery.
-
 Proposed directory structure:
 
 | Templates | a folder with Jinja2 templates or configs              |

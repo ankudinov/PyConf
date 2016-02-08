@@ -18,8 +18,9 @@ cd /path-to-script-directory/
 Script will ask for your username and password and start delivery.  
 Proposed directory structure:
 
-| Templates | a folder with Jinja2 templates or configs              |
+| dir/file  | comments                                               |
 | --------- | -------------------------------------------------------|
+| Templates | a folder with Jinja2 templates or configs              |
 | db        | host databases, YAML                                   |
 | task      | task files (aka playbooks), YAML                       |
 | PyConf.py | a piece of unreadable code                             |

@@ -15,7 +15,7 @@ To run the script, write your own host-db.yml, task-file.yml and templates and e
 cd /path-to-script-directory/
 ./pconf.py ./task/configure-a-vlan.yml
 ```
-Script will ask for your username and password and start delivery.
+Script will ask for your username and password and start delivery.  
 Proposed directory structure:
 
 | Templates | a folder with Jinja2 templates or configs              |

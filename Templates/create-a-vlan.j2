@@ -1,9 +1,10 @@
 {#
-This template can be used to configure a FabricPath VLAN on Nexus switches.
+Create a FabricPath VLAN, SVI interface and configure HSRP anycast group on a Nexus switch (primary).
 Variables:
-
-VLAN_NUMBER: VLAN number to be configured
-VLAN_NAME: VLAN name to be configured
+  VLAN_NUMBER: VLAN number to be configured
+  VLAN_NAME: VLAN name to be configured
+  SUBNET: Subnet address. Only relevent bits should be provided, like 192.168.1 for 192.168.1.0/24
+  MASK: Subnet mask in /XX format
 #}
 
 terminal length 0
@@ -11,5 +12,17 @@ conf t
 vlan {{ VLAN_NUMBER }}
   mode fabricpath
   name {{ VLAN_NAME }}
+!
+int vlan{{ VLAN_NUMBER }}
+  description {{ VLAN_NAME }}
+  ip address {{ SUBNET }}.2{{ MASK }}
+  hsrp version 2
+  hsrp {{ VLAN_NUMBER }}
+    ip {{ SUBNET }}.1
+  no shutdown
+!
+hsrp anycast 1 ipv4
+  vlan {{ VLAN_NUMBER }}
+!
 end
 copy run start

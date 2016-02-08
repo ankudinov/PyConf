@@ -1,0 +1,5 @@
+# Host database
+# 'host_ip': [tag1, tag2, tag3, etc.]
+# Hostname recommended as the 1st tag.
+10.10.10.10: [Nexus1, HQ, primary, N7k]
+10.20.20.20: [Nexus2, HQ, secondary, N7k]

@@ -16,7 +16,7 @@
   tasks:          # Contains a name and list of templates to be delivered to hosts.
   - name: configure a test VLAN on the primary Nexus
     template:
-    - ./Templates/configure-a-vlan-pri.j2
+    - ./Templates/create-a-vlan-pri.j2
     
 - hosts:          # Tag list to select entries from database. Logical AND if multiple tags are used.
   - N7k
@@ -27,4 +27,4 @@
   tasks:          # Contains a name and list of templates to be delivered to hosts.
   - name: configure a test VLAN on the secondary Nexus
     template:
-    - ./Templates/configure-a-vlan-sec.j2
+    - ./Templates/create-a-vlan-sec.j2

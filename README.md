@@ -25,4 +25,4 @@ Proposed directory structure:
 | PyConf.py | a piece of unreadable code                             |
 | pconf.py  | starts the script with YAML task as mandatory argument |
 
-NOTE: This is a very first version. A lot to be improved. Any suggestions are welcome.
+NOTE: This is a very first version. A lot to be improved. **Any suggestions are welcome.**

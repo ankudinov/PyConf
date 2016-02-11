@@ -39,6 +39,7 @@ def search_prompt(a_string, mode='cisco'):
             r'^.*>(\s)*$',          # Example: router>
             r'^.*\(.*\)#(\s)*$',    # Example: router(config)# or any submode
             r'^Destination filename \[startup-config\]\?',    # Example: Destination filename [startup-config]?
+            r'^.*\[confirm\]',  # Example: This operation will remove all username related configurations with same name.Do you want to continue? [confirm]
         ]
     }
 

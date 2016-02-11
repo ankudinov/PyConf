@@ -11,7 +11,7 @@ Key features:
 - Hosts can be selected from a simple YAML database by specifing tags. One line per host to be grep friendly.
 
 PyConf is not designed to be an Ansible module. And if you want one, take a look at `netmiko` first. It looks more mature.
-But if this tool has a future, it is not in DevOps world. It is on a laptop of an old-style admin, that has to do some stupid thing, right now.
+But if this tool has a future, it is not DevOps world. It is on a laptop of an old-style admin, that has to do some stupid thing, right now.
 
 To run the script, write your own host-db.yml, task-file.yml and templates and execute it in following way:
 ```text

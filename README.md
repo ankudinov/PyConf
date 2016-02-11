@@ -27,3 +27,12 @@ Proposed directory structure:
 | pconf.py  | starts the script with YAML task as mandatory argument |
 
 NOTE: This is a very first version. A lot to be improved. **Any suggestions are welcome.**
+
+TODO:
+- Error checks of all kinds.
+- Clean and readable code. Lowest priority, obviously. =)
+- Logical OR between tags.
+- Option to print config generated from template instead of delivery.
+- Web interface (Flask) and/or interactive mode.
+- Progress bar or similar while script is running.
+- Move regexp dictionary to a faile.

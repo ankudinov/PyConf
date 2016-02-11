@@ -35,4 +35,4 @@ TODO:
 - Option to print config generated from template instead of delivery.
 - Web interface (Flask) and/or interactive mode.
 - Progress bar or similar while script is running.
-- Move regexp dictionary to a faile.
+- Move regexp dictionary to a file.

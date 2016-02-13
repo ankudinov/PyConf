@@ -39,4 +39,5 @@ TODO:
 - Web interface (Flask) and/or interactive mode.
 - Progress bar or similar while script is running.
 - Move regexp dictionary to a file.
-- Docker image
+- Docker image.
+- A bit more creative name.
